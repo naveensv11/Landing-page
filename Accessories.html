@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessories Section</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="accessories-section">
+        <h2>Our Accessories Collection</h2>
+        <div class="accessories-container">
+            <div class="accessory-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK9y8THV-bpqvNuO9sKqB19nuHhZD6FU_o0w&s" alt="Accessory 1">
+                <h3>MEN</h3>
+                <p>Essential Men's Accessories</p>
+            </div>
+            <div class="accessory-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzE0GZIq_cuwjCpCYGm1eKfDTlHJbSVJWsy4JUf5BS9w6wGF6zpbAZ8tqXxivdPY16io8&usqp=CAU" alt="Accessory 2">
+                <h3>Women</h3>
+                <p>Elegant Women's Accessories </p>
+            </div>
+            <div class="accessory-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzlm3ZggAV1fpcw5vSIu-qCPAKdxlOhCV8Wg&s" alt="Accessory 3">
+                <h3>kids</h3>
+                <p>kids Accessories</p>
+            </div>
+        </div>
+    </section>
+    <style>
+      body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8; /* Soft light background for contrast */
+    margin: 0;
+    padding: 20px;
+}
+
+.accessories-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px;
+    background: #ffffff; /* White background for the section */
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.accessories-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid layout */
+    gap: 20px; /* Spacing between items */
+}
+
+.accessory-item {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    overflow: hidden; /* Clip overflow */
+    position: relative; /* For overlay positioning */
+}
+
+.accessory-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.3s ease; /* Image scale on hover */
+}
+
+.accessory-item h3 {
+    font-size: 1.6em;
+    color: #e8ecf0; /* Strong blue color for headings */
+    margin: 15px 0 10px;
+}
+
+.accessory-item p {
+    font-size: 1em;
+    color: #666; /* Dark gray text for descriptions */
+}
+
+.accessory-item:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 8px 30px rgba(181, 201, 223, 0.3); /* Stronger shadow on hover */
+}
+
+.accessory-item:hover img {
+    transform: scale(1.05); /* Slight scale effect on image */
+}
+
+/* Overlay Effect */
+.accessory-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for overlay */
+}
+
+.accessory-item:hover::after {
+    opacity: 1; /* Show overlay on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2.2em; /* Slightly smaller heading on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.8em; /* Smaller heading on mobile */
+    }
+}
+
+      </style>
+</body>
+</html>
